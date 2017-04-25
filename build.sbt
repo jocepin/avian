@@ -1,5 +1,7 @@
 import Dependencies._
+import org.scoverage.coveralls.Imports.CoverallsKeys._
 
+/* Global configuration */
 lazy val root = (project in file(".")).
   settings(
     inThisBuild(List(
@@ -10,3 +12,9 @@ lazy val root = (project in file(".")).
     name := "avian",
     libraryDependencies += scalaTest % Test
   )
+
+/* Code coverage configuration */
+coverageMinimum := 70
+coverageFailOnMinimum := false
+coverageHighlighting := true
+//coverallsTokenFile := ".token.txt"
