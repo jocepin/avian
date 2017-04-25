@@ -8,8 +8,6 @@ object Dependencies {
 
   /* Libraries
    */
-  val scalaTest = "org.scalatest" %% "scalatest" % testVersion
-  val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
-  
-  val backendDeps = Seq(akkaActor, scalaTest)
+  lazy val scalaTest = "org.scalatest" %% "scalatest" % testVersion
+  lazy val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
 }
