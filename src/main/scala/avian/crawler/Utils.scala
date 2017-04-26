@@ -11,7 +11,6 @@ object Url {
         val pattern = """(?:https?://)?(?:www\.)?([A-Za-z0-9._%+-]+)/?.*""".r
         url match {
             case pattern(domain) => domain.stripSuffix(".onion").trim
-            case _ => ""
         }
     }
 
@@ -22,13 +21,15 @@ object Url {
         if(ssl) {
             checkValidHash(hash) match {
                 case true => "https://%s.onion".format(hash)
+                case _ => ""
             }
         } else {
             checkValidHash(hash) match {
                 case true => "http://%s.onion".format(hash)
+                case _ => ""
             }
         }
-    } 
+    }
 
     /* @Desc: Predicate to check if the hash length is correct
      * @Todo: Check if the hash is base32

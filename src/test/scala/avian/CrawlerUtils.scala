@@ -6,6 +6,7 @@ import com.avian.crawler.utils._
 class UtilsTest extends FlatSpec with Matchers {
     "A onion hash" should "have a correct length" in {
         Url.checkValidHash("3g2upl4pq6kufc4m") should be (true)
+        Url.checkValidHash("s0m3f001nv4l1dh4sh") should be (false)
     }
     "A onion url" should "be extracted as string hash" in {
         Url.extractHash("http://3g2upl4pq6kufc4m.onion/") should be ("3g2upl4pq6kufc4m")

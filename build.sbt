@@ -10,11 +10,16 @@ lazy val root = (project in file(".")).
       version      := "0.1.0"
     )),
     name := "avian",
-    libraryDependencies += scalaTest % Test
+      libraryDependencies ++= Seq(
+          scalaTest % Test,
+          tsConfig,
+          akkaActor,
+          mongoDb
+      )
   )
 
 /* Code coverage configuration */
 coverageMinimum := 70
 coverageFailOnMinimum := false
 coverageHighlighting := true
-//coverallsTokenFile := ".token.txt"
+coverallsTokenFile := Some("src/main/resources/token.txt")

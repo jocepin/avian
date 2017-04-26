@@ -1,7 +1,7 @@
 package com.avian
 
-/* @info: Application entrypoint
+/* @Desc: Application entrypoint
  */
 object Entry extends App {
-
+    
 }
