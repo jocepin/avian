@@ -10,6 +10,8 @@ object Configs {
         "host" -> "localhost",
         "port" -> 27017,
         "user" -> "root",
-        "password" -> "smokingkills"
+        "password" -> "smokingkills",
+        "database" -> "avian",
+        "collection" -> "crawled"
     )
 }
