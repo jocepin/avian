@@ -1,4 +1,5 @@
 <p align="center">
+    <img src="https://my.mixtape.moe/bhwfcw.png"/>
     <b>avian</b><br>   
     <a href='https://travis-ci.org/iomonad/avian'>
         <img src='https://travis-ci.org/iomonad/avian.svg?branch=master' alt='Build status'/>
