@@ -2,7 +2,7 @@ package com.avian
 
 import org.scalatest._
 import com.avian.utils.config._
-
+  
 class ConfigTest extends FlatSpec with Matchers {
     "The config" should "be parsed and formated in a string" in {
         lazy val instance = Configs.instance

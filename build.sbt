@@ -14,9 +14,13 @@ lazy val root = (project in file(".")).
           scalaTest % Test,
           tsConfig,
           akkaActor,
+          akkaTest,
           mongoDb
       )
   )
+
+/* Scala lang related */
+scalacOptions += "-deprecation"
 
 /* Code coverage configuration */
 coverageMinimum := 70

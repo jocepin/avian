@@ -3,7 +3,7 @@ package com.avian
 import akka.actor.Actor
 import akka.actor.ActorSystem
 import akka.actor.Props
-import com.avian.crawler.database.DatabaseActor
+import com.avian.crawler.database.{DatabasePostActor, DatabaseGetActor}
 
 /* @Desc: Application entrypoint
  */
@@ -15,8 +15,9 @@ object Entry extends App {
     val system = ActorSystem("AvianSystem")
 
     /* Create database actor */
-    val dbActor = system.actorOf(Props[DatabaseActor], name = "dbActor")
-
+    val dbPost = system.actorOf(Props[DatabasePostActor], name = "dbPost")
+    val dbGet  = system.actorOf(Props[DatabaseGetActor], name = "dbGet")
     /* Pass some test values to actors */
-    dbActor ! "count"
+    dbPost ! "foo"
+    dbPost ! "bar"
 }

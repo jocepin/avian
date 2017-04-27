@@ -12,6 +12,7 @@ object Dependencies {
      */
     lazy val scalaTest = "org.scalatest" %% "scalatest" % testVersion
     lazy val akkaActor = "com.typesafe.akka" %% "akka-actor" % akkaVersion
-    lazy val tsConfig = "com.typesafe" % "config" % configVersion
-    lazy val mongoDb = "org.mongodb" %% "casbah" % mongoVersion
+    lazy val akkaTest  = "com.typesafe.akka" %% "akka-testkit" % akkaVersion
+    lazy val tsConfig  = "com.typesafe" % "config" % configVersion
+    lazy val mongoDb   = "org.mongodb" %% "casbah" % mongoVersion
 }
