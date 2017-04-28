@@ -15,7 +15,8 @@ lazy val root = (project in file(".")).
           tsConfig,
           akkaActor,
           akkaTest,
-          mongoDb
+          mongoDb,
+          sl4j
       )
   )
 

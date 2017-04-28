@@ -13,11 +13,9 @@ class DatabasePostActor extends Actor
         with Creation
         with Updating
         with Deleting {
-    var test: String = ""
     def receive = {
-        case msg: String => {
-            test = msg
-            sender ! "msg is" + msg 
+        case msg: String => msg match {
+            case "hello" => sender ! "hello"
         }
         case _ => println("Command not implented")
     }
@@ -28,7 +26,10 @@ class DatabasePostActor extends Actor
 class DatabaseGetActor extends Actor
         with Reading {
     def receive = {
-        case _ => 
+        case msg: String => msg match {
+            case "hello" => sender ! "hello"
+        }
+        case _ => println("Command not implented")
     }
 }
 
