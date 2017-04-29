@@ -21,3 +21,6 @@ project/plugins/project/
 backend
 .token.txt
 src/main/resources/token.txt
+codecov
+.codecov.yml
+codecov.yml

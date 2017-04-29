@@ -1,6 +1,7 @@
 package com.avian
 
 import org.scalatest._
+import org.scalatest.WordSpec
 import com.avian.crawler.database._
 import com.avian.crawler.types.Onion
 import akka.actor.ActorSystem
@@ -51,22 +52,6 @@ class DatabaseTest extends FlatSpec with Matchers {
     }
 }
 
-
-class BasicTest extends TestKit(ActorSystem("testSystem"))
-        with ImplicitSender
-        with Matchers {
-
-    /*"A simple actor" must {
-
-        " (1) receive message" in {
-            val dbPost = TestActorRef[DatabasePostActor]
-            dbPost ! "hello"
-            expectMsg("hello")
-        }
-
-        " (2) receive message" in {
-            val dbGet = TestActorRef[DatabaseGetActor]
-            expectMsg("test")
-        }
-    }*/
+class DbActorTest extends TestKit(ActorSystem("testSystem"))
+        with MustMatchers {
 }

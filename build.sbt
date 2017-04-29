@@ -1,5 +1,4 @@
 import Dependencies._
-import org.scoverage.coveralls.Imports.CoverallsKeys._
 
 /* Global configuration */
 lazy val root = (project in file(".")).
@@ -27,4 +26,3 @@ scalacOptions += "-deprecation"
 coverageMinimum := 70
 coverageFailOnMinimum := false
 coverageHighlighting := true
-coverallsTokenFile := Some("src/main/resources/token.txt")
