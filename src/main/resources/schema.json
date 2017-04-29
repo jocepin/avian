@@ -1,0 +1,79 @@
+    {
+        "$schema": "http://json-schema.org/draft-04/schema#",
+        "definitions": {},
+        "id": "http://example.com/example.json",
+        "properties": {
+            "data": {
+                "id": "/properties/data",
+                "properties": {
+                    "bucket": {
+                        "id": "/properties/data/properties/bucket",
+                        "type": "string"
+                    },
+                    "header": {
+                        "id": "/properties/data/properties/header",
+                        "properties": {
+                            "content_lenght": {
+                                "id": "/properties/data/properties/header/properties/content_lenght",
+                                "type": "integer"
+                            },
+                            "content_type": {
+
+                                "id": "/properties/data/properties/header/properties/content_type",
+                                "type": "string"
+                            },
+                            "encoding":
+     {
+                                "id": "/properties/data/properties/header/properties/encoding",
+                                "type": "string"
+                            },
+
+                            "location": {
+                                "id": "/properties/data/properties/header/properties/location",
+                                "type": "string"
+                            },
+                            "server": {
+                                "id": "/properties/data/properties/header/properties/server",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "type": "object"
+            },
+            "hash": {
+                "id": "/properties/hash",
+                "type": "string"
+            },
+            "identity": {
+                "id": "/properties/identity",
+                "properties": {
+                    "fingerprint": {
+                        "id": "/properties/identity/properties/fingerprint",
+                        "type": "string"
+                    },
+                    "pub_key": {
+                        "id": "/properties/identity/properties/pub_key",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "status": {
+                "id": "/properties/status",
+                "properties": {
+                    "active": {
+                        "id": "/properties/status/properties/active",
+                        "type": "boolean"
+                    },
+                    "last_data": {
+                        "id": "/properties/status/properties/last_data",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        },
+        "type": "object"
+    }
