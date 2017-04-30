@@ -26,3 +26,4 @@ scalacOptions += "-deprecation"
 coverageMinimum := 70
 coverageFailOnMinimum := false
 coverageHighlighting := true
+coverallsTokenFile := Some("src/main/resources/token.txt")
